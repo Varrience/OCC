@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CDO Compiler</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Upload a ZIP file to be processed by the CDO Compiler">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script src="./dependencies/jszip.min.js"></script>
+    <script src="./src/compile.js" type="module"></script>
+    <style>
+        body {
+            background: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        label {
+            margin-bottom: 5px;
+            font-weight: bold;
+            width: 20%;
+            text-align: center;
+        }
+
+        input[type="file"] {
+            width: 80%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background: #333;
+            color: white;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 3em;
+            margin-top: 10px;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        button:disabled {
+            background-color: #555;
+            cursor: not-allowed;
+        }
+
+        #status {
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 4px;
+        }
+
+        .success {
+            background-color: #dff0d8;
+            color: #3c763d;
+        }
+
+        .error {
+            background-color: #f2dede;
+            color: #a94442;
+        }
+
+        #downloadLink {
+            display: block;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CDO Compiler</h1>
+    <h2>Upload your exported project to the CDO Compiler.</h2>
+
+    <form id="fileUpload" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="projectId">Project ID:</label>
+            <input id="projectId" type="text" placeholder="Enter your project id" required>
+        </div>
+        <div class="form-group">
+            <label for="zipFile">Select ZIP:</label>
+            <input id="zipFile" type="file" name="file" accept=".zip" required>
+        </div>
+        <div class="form-group">
+            <label for="storageFile">Project Data:</label>
+            <input id="storageFile" type="file" name="storage" accept=".json">
+        </div>
+        <button id="convertBtn" type="submit">Convert</button>
+    </form>
+
+    <div id="status"></div>
+
+    <script src="./src/modify.js" type="module"></script>
+</body>
+
+</html>
