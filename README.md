@@ -62,7 +62,7 @@ async function getTables() {
     }
 }
 ``` 
-You must be **on the project** and **signed in**! This will not work if you do not follow these instructions exactly.
+You must be **on the project** and **signed in**! This will not work if you do not follow these instructions exactly. Once finished attach the ``.json`` file to the upload box.
 Otherwise leave it blank and press the convert button and wait
 
 > ## How do i run it?
