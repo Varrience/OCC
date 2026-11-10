@@ -60,6 +60,8 @@ async function getTables() {
 ``` 
 You must be **on the project** and **signed in**! This will not work if you do not follow these instructions exactly.
 Otherwise leave it blank and press the convert button and wait
+> ## How do i run it?
+- For some browsers you may need to localhost the directory or use some form of CDN of your choice (you could even upload it to github and run it as a page!) once you have that set up its pretty much all set no complex server backend needed, enjoy!
 > ## Who isn't this for
 - If your expecting everything to run smoothly out of the box please do not use this tool, this is not a sandbox. specific variables will crash the enviroment because it is running directly on a browser window not a sandbox.
 If you are expecting everything to work. things like text to speech was never fully implemented in the API so do not expect things like that to work, if you want to implement that yourself feel free to.
