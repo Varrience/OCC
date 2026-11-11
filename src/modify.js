@@ -6,7 +6,6 @@ document.getElementById("fileUpload").addEventListener("submit", async function 
     const projectId = document.getElementById("projectId").value;
     const projectZip = document.getElementById("zipFile");
     const projectJSON = document.getElementById("storageFile");
-    // Reset UI
     statusDiv.textContent = "";
     statusDiv.className = "";
     convertBtn.disabled = true;
@@ -24,7 +23,6 @@ document.getElementById("fileUpload").addEventListener("submit", async function 
         statusDiv.textContent = "Processing file...";
         statusDiv.className = "info";
 
-        // Process the files (modify this function for your needs)
         new Compiler(projectZip, projectId, projectJSON)
 
     } catch (error) {
